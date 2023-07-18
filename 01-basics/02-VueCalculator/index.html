@@ -29,27 +29,50 @@
 
   <body>
     <div id="app" class="container">
-      <div class="row">
+      <div  class="row">
         <div class="col">
-          <input type="number" />
+          <input v-model="actions.firstImput" type="number" />
         </div>
 
-        <div class="col" style="display: flex; flex-direction: column; font-family: emoji">
-          <label><input type="radio" name="operator" value="sum" /> ➕</label>
-          <label><input type="radio" name="operator" value="subtract" /> ➖</label>
-          <label><input type="radio" name="operator" value="multiply" /> ✖</label>
-          <label><input type="radio" name="operator" value="divide" /> ➗</label>
+        <div  class="col" style="display: flex; flex-direction: column; font-family: emoji">
+          <label 
+          >
+            <input 
+            type="radio" 
+            name="operator"
+            value="sum"
+            v-model="actions.action"
+            /> ➕
+          </label>
+          <label><input 
+            type="radio" 
+            name="operator"
+            value="subtract"
+            v-model="actions.action"
+             /> ➖</label>
+          <label><input 
+            type="radio" 
+            name="operator"
+            value="multiply"
+            v-model="actions.action"
+             /> ✖</label>
+          <label><input 
+            type="radio" 
+            name="operator"
+            value="divide"
+            v-model="actions.action"
+              /> ➗</label>
         </div>
 
         <div class="col">
-          <input type="number" />
+          <input v-model="actions.secondImput" type="number" />
         </div>
 
         <div class="col">=</div>
-
-        <output class="col">0</output>
+        <output class="col">{{  calculationActions }}</output>
       </div>
     </div>
+
 
     <script type="module" src="./script.js"></script>
   </body>
