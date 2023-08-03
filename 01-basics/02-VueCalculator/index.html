@@ -31,7 +31,7 @@
     <div id="app" class="container">
       <div  class="row">
         <div class="col">
-          <input v-model="actions.firstImput" type="number" />
+          <input v-model="firstImput" type="number" />
         </div>
 
         <div  class="col" style="display: flex; flex-direction: column; font-family: emoji">
@@ -41,31 +41,31 @@
             type="radio" 
             name="operator"
             value="sum"
-            v-model="actions.action"
+            v-model="action"
             /> ➕
           </label>
           <label><input 
             type="radio" 
             name="operator"
             value="subtract"
-            v-model="actions.action"
+            v-model="action"
              /> ➖</label>
           <label><input 
             type="radio" 
             name="operator"
             value="multiply"
-            v-model="actions.action"
+            v-model="action"
              /> ✖</label>
           <label><input 
             type="radio" 
             name="operator"
             value="divide"
-            v-model="actions.action"
+            v-model="action"
               /> ➗</label>
         </div>
 
         <div class="col">
-          <input v-model="actions.secondImput" type="number" />
+          <input v-model="secondImput" type="number" />
         </div>
 
         <div class="col">=</div>

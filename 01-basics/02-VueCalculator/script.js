@@ -7,46 +7,32 @@ const App = defineComponent({
 
    data() {
       return {       
-         
-         actions:{
-            firstImput : 5, 
-            secondImput: 6,
-            action:'',
-            result:0,
-         }
+         firstImput : 5, 
+         secondImput: 6,
+         action:'',
+         result:0,
       }
    },
    methods: {
-      
+
    },
 
    computed:{
       calculationActions(){
-         
-         switch(this.actions.action) {
+         switch(this.action) {
             case 'sum':  
-           
-                this.actions.result = this.actions.firstImput + this.actions.secondImput;
-                break
-          
+               return this.firstImput + this.secondImput;          
             case 'subtract':  
-                this.actions.result = this.actions.firstImput - this.actions.secondImput;
-                break
-
+            return this.firstImput - this.secondImput;
             case 'multiply':  
-                this.actions.result = this.actions.firstImput * this.actions.secondImput;
-                break
-
+               return  this.firstImput * this.secondImput;
             case 'divide':  
-                this.actions.result = this.actions.firstImput / this.actions.secondImput;     
-                break          
-          }
-
-          
-         return this.actions.result = this.actions.result;    
+               return  this.firstImput / this.secondImput;     
+            default:    
+               this.result;          
+          }  
       }
    } 
-
    });
 
    const app =createApp(App);

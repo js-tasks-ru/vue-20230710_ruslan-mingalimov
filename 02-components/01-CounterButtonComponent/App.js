@@ -13,7 +13,7 @@ export default defineComponent({
       count: undefined,
     };
   },
-
+  
   template: `
     <div class="sample container">
       <p>count = {{ count }}</p>
