@@ -9,10 +9,10 @@ export default defineComponent({
     }
     
   },
-  methods: {
-    incimentCount(count){
-      this.$emit('update:count', count+1);
-    }
-  },
-  template: `<button @click="incimentCount(count)" type="button" >{{ count }}</button>`,
+  // methods: {
+  //   incimentCount(count){
+  //     this.$emit('update:count', count+1);
+  //   }
+  // },
+  template: `<button @click="$emit('update:count', count+1)" type="button" >{{ count }}</button>`,
 });
