@@ -10,7 +10,6 @@ const App = defineComponent({
          firstImput : 5, 
          secondImput: 6,
          action:'',
-         result:0,
       }
    },
    methods: {
@@ -29,7 +28,7 @@ const App = defineComponent({
             case 'divide':  
                return  this.firstImput / this.secondImput;     
             default:    
-               this.result;          
+               0          
           }  
       }
    } 
